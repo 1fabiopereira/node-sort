@@ -8,6 +8,7 @@ module.exports = {
   bucket: require('./core/algorithms/bucket'),
   insertion: require('./core/algorithms/insertion'),
   shell: require('./core/algorithms/shell'),
+  heap: require('./core/algorithms/heap'),
   ASC:  false,
   DESC: true
-}
+};

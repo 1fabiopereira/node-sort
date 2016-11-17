@@ -6,14 +6,14 @@ describe('Comb', () => {
 
   var exec = (array, fnCompare) =>{
     return sort.comb(array, fnCompare);
-  }
+  };
 
   // Ordenação quando não é um array
   describe('Não Array', ()=> {
     it("Null", ()=>{
       assert.deepEqual([], exec(null, sort.ASC), "Array vazio quando valor for null");
       assert.deepEqual([], exec(null, sort.DESC), "Array vazio quando valor for null");
-    })
+    });
 
     it("Undefined", ()=>{
       assert.deepEqual([], exec(undefined, sort.ASC), "Array vazio quando valor for undefined");
@@ -76,14 +76,14 @@ describe('Comb', () => {
       {name: "Alex", age: 12},
       {name: "Max", age: 34},
       {name: "Justin", age: 53}
-    ]
+    ];
 
     let array_out_desc = [
       {name: "Justin", age: 53},
       {name: "Max", age: 34},
       {name: "Alex", age: 12},
       {name: "Mary", age: 9}
-    ]
+    ];
 
     const fnASC = (a,b) => {
       return a.age > b.age;

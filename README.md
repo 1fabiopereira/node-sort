@@ -134,6 +134,15 @@ sort.shell(array, sort.ASC)
 sort.shell(array, comparisonFunction)
 ```
 
+##### :white_check_mark: Heap Sort
+:warning: This implementation only supports numbers
+```
+sort.heap(array, sort.DESC)
+```
+```
+sort.heap(array, sort.ASC)
+```
+
  :pencil2: Example how to use:
 
 ```javascript   
