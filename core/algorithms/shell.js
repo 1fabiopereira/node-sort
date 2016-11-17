@@ -17,7 +17,7 @@ const _shell = (array, fnCompare) =>{
         array[j] = swap;
      }
     }
-    return fnCompare(1, 0) ? array : array.reverse();
+    return fnCompare ? (fnCompare(1, 0) ? array : array.reverse()) : array;
 };
 
 module.exports = _shell;

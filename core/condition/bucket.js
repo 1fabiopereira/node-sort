@@ -1,5 +1,6 @@
 'use strict';
 module.exports = (fnCompare)=>{
+
     const swap = fnCompare;
 
     if(typeof(fnCompare) === 'boolean' && !fnCompare)

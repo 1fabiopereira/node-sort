@@ -45,7 +45,7 @@ const _bucket = (array, bucketSize, fnCompare) =>{
         }
     }
 
-    return fnCompare(0,1) ? array : array.reverse();
+    return fnCompare ? (fnCompare(0,1) ? array : array.reverse()) : array;
 };
 
 module.exports = _bucket;
