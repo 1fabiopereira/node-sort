@@ -22,7 +22,7 @@ In computer science, big O notation is used to classify algorithms by how they r
 | Merge  | DONE  |
 | Comb  | DONE  |
 | Time  | TODO  |
-| Heap  | TODO  |
+| Heap  | DONE  |
 | Bubble  | DONE  |
 | Insertion  | DONE |
 | Selection  | TODO  |
