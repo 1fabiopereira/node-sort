@@ -1,6 +1,6 @@
 {
   "name": "node-sortable",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": " Its a library that implements various sorting algorithms and displays its performance according to BIG -O notation",
   "main": "sort.js",
   "keywords": [
