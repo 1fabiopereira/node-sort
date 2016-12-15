@@ -88,6 +88,17 @@ sort.merge(array, sort.ASC)
 sort.merge(array, comparisonFunction)
 ```
 
+##### :white_check_mark: Selection Sort
+```
+sort.selection(array, sort.DESC)
+```
+```
+sort.selection(array, sort.ASC)
+```
+```
+sort.selection(array, comparisonFunction)
+```
+
 ##### :white_check_mark: Bubble Sort
 ```
 sort.bubble(array, sort.DESC)
