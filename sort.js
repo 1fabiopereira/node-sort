@@ -9,6 +9,7 @@ module.exports = {
   insertion: require('./core/algorithms/insertion'),
   shell: require('./core/algorithms/shell'),
   heap: require('./core/algorithms/heap'),
+  selection: require('./core/algorithms/selection'),
   ASC:  false,
   DESC: true
 };

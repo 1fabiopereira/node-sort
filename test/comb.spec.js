@@ -2,7 +2,7 @@
 const assert = require('chai').assert;
 const sort = require('../sort');
 
-describe('Comb', () => {
+describe('Selection', () => {
 
   var exec = (array, fnCompare) =>{
     return sort.comb(array, fnCompare);
