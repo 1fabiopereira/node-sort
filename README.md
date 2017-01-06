@@ -1,5 +1,9 @@
 #  node-sortable :rocket::smile: 
 [![Build Status](https://travis-ci.org/1fabiopereira/node-sortable.svg?branch=master)](https://travis-ci.org/1fabiopereira/node-sortable) [![npm version](https://badge.fury.io/js/node-sortable.svg)](https://badge.fury.io/js/node-sortable) [![Coverage Status](https://coveralls.io/repos/github/1fabiopereira/node-sortable/badge.svg)](https://coveralls.io/github/1fabiopereira/node-sortable)
+
+[![NPM](https://nodei.co/npm/node-sortable.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-sortable/)
+[![NPM](https://nodei.co/npm-dl/node-sortable.png)](https://nodei.co/npm/node-sortable/)
+
 ### :pushpin:  What is that ?
 
 
