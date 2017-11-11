@@ -1,8 +1,27 @@
 {
   "name": "node-sortable",
-  "version": "0.1.4",
-  "description": " Its a library that implements various sorting algorithms and displays its performance according to BIG -O notation",
-  "main": "sort.js",
+  "version": "2.0.0",
+  "description": "Implementation of various sorting algorithms via pure functions",
+  "main": "./src/index",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.11.0",
+    "jsdoc": "^3.5.5",
+    "nyc": "^11.3.0"
+  },
+  "scripts": {
+    "test": "nyc ./node_modules/mocha/bin/mocha --reporter spec test/unit/*_spec.js",
+    "doc": "./node_modules/.bin/jsdoc ./src/*.js -d ./docs -t ./node_modules/docdash -R ./docs/DOCS_README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1fabiopereira/node-sortable.git"
+  },
   "keywords": [
     "nodejs",
     "sort",
@@ -21,40 +40,16 @@
     "countingsort",
     "cubesort"
   ],
-
   "author": "Fábio Pereira <fabio.pereira.gti@gmail.com>",
-
-  "contributors":[],
-
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/1fabiopereira/node-sortable#pushpin--license"
-    }
+  "contributors": [
+    "Pedro Miguel Pereira Serrano Martins <palmelapedro@gmail.com>"
   ],
-
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/1fabiopereira/node-sortable"
-  },
-
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/1fabiopereira/node-sortable/issues"
   },
-
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^3.4.0",
-    "istanbul": "^0.4.5",
-    "jsdoc": "^3.4.0",
-    "mocha": "^3.0.2"
-  },
-
-  "scripts": {
-    "test": "mocha ./test",
-    "eslint": "eslint ./core/**/*.js ",
-    "cover": "istanbul cover _mocha -- ./test/* --recursive",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
-    "jsdocs": "jsdoc ./core/**/*.js"
+  "homepage": "https://github.com/1fabiopereira/node-sortable#readme",
+  "dependencies": {
+    "lodash.isfunction": "^3.0.8"
   }
 }
