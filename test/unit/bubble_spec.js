@@ -1,6 +1,6 @@
 
 const expect = require("chai").expect;
-const { bubble } = require("../sort");
+const { bubble } = require("../../src");
 
 describe("bubble", () => {
 
