@@ -1,4 +1,5 @@
 const isFunction = require("lodash.isfunction");
+const cloneDeep = require("lodash.clonedeep");
 
 const bubble = (array, fnCompare) => {
 
@@ -10,6 +11,8 @@ const bubble = (array, fnCompare) => {
 
     if (array.length === 0)
         return [];
+
+    const clonedArray = cloneDeep(array);
 
     let swapped;
 

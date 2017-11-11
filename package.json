@@ -50,6 +50,7 @@
   },
   "homepage": "https://github.com/1fabiopereira/node-sortable#readme",
   "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
     "lodash.isfunction": "^3.0.8"
   }
 }
