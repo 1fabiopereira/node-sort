@@ -1,9 +1,11 @@
 const isFunction = require("lodash.isfunction");
 const cloneDeep = require("lodash.clonedeep");
 
-const bubble = (array, fnCompare) => {
+const defaultCompare = require("");
 
-    if(!isFunction(fnCompare))
+const bubble = ( array, fnCompare = defaultCompare ) => {
+
+    if( !isFunction(fnCompare) )
         throw new Error("fnCompare must be a function");
 
     if(!Array.isArray(array))
@@ -14,25 +16,23 @@ const bubble = (array, fnCompare) => {
 
     const clonedArray = cloneDeep(array);
 
-    let swapped;
-
-    //not very functional :P
-    do {
-        swapped = false;
-        for (let i = 0; i < array.length - 1; i++) {
-            if(fnCompare(array[i], array[i + 1])) fnSwap(i);
-        }
-    } while (swapped);
-
-    return array;
+    return recursiveSort( clonedArray, clonedArray.length, fnCompare );
 };
 
-//this is directly altering the array we start with
-const fnSwap = function (i) {
-    const temp = array[i];
-    array[i] = array[i + 1];
-    array[i + 1] = temp;
-    swapped = true;
+const recursiveSort = ( array, unsortedLength, fnCompare ) => {
+    if( unsortedLength === 1 )
+        return array;
+
+    for( let i = 0; i < unsortedLength - 1; i++ ){
+
+        if( fnCompare( array[i], array[i + 1] ) > 0 ){
+            const temp = array[i];
+            array[i] = array[i + 1];
+            array[i + 1] = temp;
+        }
+    }
+
+    return recursiveSort( array, unsortedLength - 1, fnCompare );
 };
 
 module.exports = bubble;
