@@ -23,14 +23,20 @@ const recursiveSort = ( array, unsortedLength, fnCompare ) => {
     if( unsortedLength === 1 )
         return array;
 
+    let swapped = false;
     for( let i = 0; i < unsortedLength - 1; i++ ){
 
         if( fnCompare( array[i], array[i + 1] ) > 0 ){
             const temp = array[i];
             array[i] = array[i + 1];
             array[i + 1] = temp;
+            swapped = true;
         }
     }
+
+    //Ensure O(n) if array is already ordered
+    if(!swapped)
+        return array;
 
     return recursiveSort( array, unsortedLength - 1, fnCompare );
 };
