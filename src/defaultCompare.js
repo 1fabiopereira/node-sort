@@ -11,8 +11,8 @@ const defaultCompare = ( x, y ) => {
     if( y === undefined )
         return -1;
 
-    const xString = x.toString();
-    const yString = y.toString();
+    const xString = x + "";
+    const yString = y + "";
 
     if( xString < yString )
         return -1;

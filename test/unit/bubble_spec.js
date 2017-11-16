@@ -80,4 +80,14 @@ describe("bubble", () => {
 
         expect( bubble( array, fnCompare ) ).to.eql( expected );
     });
+
+    it("", () => {
+        const arr = [
+            undefined,
+            null, 3, 2, "B", "a", "b", "A",
+            { hello: "world"},
+            { goodnight: "moon"}
+        ];
+        expect( bubble(arr) ).to.eql([ 2, 3, "A", "B", { goodnight: "moon" }, { hello: "world" }, "a", "b", null, undefined ]);
+    });
 });

@@ -37,7 +37,6 @@ describe("BucketSort", ()=> {
 
     });
 
-
     // Verifica a ordenção de um array de números
     describe("Array de Números", () => {
         const array_in = [3,1,2, 10, 100, 138, 321, 4, 3, 12];
