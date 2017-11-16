@@ -1,7 +1,7 @@
 const isFunction = require("lodash.isfunction");
 const cloneDeep = require("lodash.clonedeep");
 
-const defaultCompare = require("");
+const defaultCompare = require("./defaultCompare");
 
 const bubble = ( array, fnCompare = defaultCompare ) => {
 

@@ -1,15 +1,13 @@
 
 module.exports = {
-    quick: require("./quick"),
+    // quick: require("./quick"),
     bubble: require("./bubble"),
-    comb: require("./comb"),
-    merge: require("./merge"),
-    radix: require("./radix"),
-    bucket: require("./bucket"),
-    insertion: require("./insertion"),
-    shell: require("./shell"),
-    heap: require("./heap"),
-    selection: require("./selection"),
-    ASC:  false,
-    DESC: true
+    // comb: require("./comb"),
+    // merge: require("./merge"),
+    // radix: require("./radix"),
+    // bucket: require("./bucket"),
+    // insertion: require("./insertion"),
+    // shell: require("./shell"),
+    // heap: require("./heap"),
+    // selection: require("./selection")
 };
