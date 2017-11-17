@@ -11,8 +11,8 @@ const defaultCompare = ( x, y ) => {
     if( y === undefined )
         return -1;
 
-    const xString = x + "";
-    const yString = y + "";
+    const xString = toString(x);
+    const yString = toString(y);
 
     if( xString < yString )
         return -1;
@@ -21,6 +21,25 @@ const defaultCompare = ( x, y ) => {
         return 1;
 
     return 0;
+};
+
+const toString = obj => {
+    //ECMA specification: http://www.ecma-international.org/ecma-262/6.0/#sec-tostring
+
+    if( obj === null )
+        return "null";
+
+    if( typeof obj === "boolean" ||  typeof obj === "number" )
+        return (obj).toString();
+
+    if( typeof obj === "string" )
+        return obj;
+
+    if( typeof obj === "symbol" )
+        throw new TypeError();
+
+    //we know we have an object. perhaps return JSON.stringify?
+    return (obj).toString();
 };
 
 module.exports = defaultCompare;
