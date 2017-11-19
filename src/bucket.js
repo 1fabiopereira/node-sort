@@ -1,11 +1,11 @@
-'use strict';
+
 
 const DEFAULT_BUCKET_SIZE = 5;
-const insertion = require('./insertion');
+const insertion = require("./insertion");
 
 const _bucket = (array, bucketSize, fnCompare) =>{
 
-    fnCompare = require('../condition/bucket')(fnCompare);
+    fnCompare = require("../condition/bucket")(fnCompare);
 
     if (!Array.isArray(array) || array.length === 0) return [];
 
@@ -26,7 +26,7 @@ const _bucket = (array, bucketSize, fnCompare) =>{
     const bucketCount = Math.floor((maxValue - minValue) / bucketSize) + 1;
 
 
-    let buckets = new Array(bucketCount);
+    const buckets = new Array(bucketCount);
 
     for (i = 0; i < buckets.length; i++) {
         buckets[i] = [];
@@ -45,7 +45,7 @@ const _bucket = (array, bucketSize, fnCompare) =>{
         }
     }
 
-    return fnCompare ? (fnCompare(0,1) ? array : array.reverse()) : array;
+    return fnCompare ? fnCompare(0,1) ? array : array.reverse() : array;
 };
 
 module.exports = _bucket;
