@@ -1,6 +1,16 @@
 const isFunction = require("lodash.isfunction");
 const defaultCompare = require("./defaultCompare");
 
+/**
+ * Description of bubble sort, and complexity in chart. Best worse and avg cases.
+ * @param  {Array} array                         The array to be sorted.
+ * @param  {Function} [fnCompare=defaultCompare] A compare function.
+ * @return {Array}                               A new sorted array.
+ *
+ * @example
+ * // random code here
+ * globalNS.method1(5, 10);
+ */
 const bubble = ( array, fnCompare = defaultCompare ) => {
 
     if( !isFunction(fnCompare) )
