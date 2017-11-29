@@ -1,0 +1,24 @@
+{
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc"]
+    },
+    "recurseDepth": 10,
+    "sourceType": "module",
+    "source": {
+        "include": [ "./src" ]
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "templates": {
+        "referenceTitle": "node-sortable"
+    },
+    "opts": {
+        "destination": "./docs",
+        "encoding": "utf8",
+        "recurse": true,
+        "template": "./node_modules/minami",
+        "readme": "./README.md"
+    }
+}

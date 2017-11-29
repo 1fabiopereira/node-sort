@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Global - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#bubble">bubble</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#defaultCompare">defaultCompare</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Global</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+<div class="section-method">
+
+    
+
+    <h4 class="name" id="bubble"><span class="type-signature"></span>bubble<span class="signature">(array, fnCompare<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Bubble sort ( aka sinking sort ) is an algorithm that steps through a list comparing adjacent items and swapping then when necessary.
+This pass through is completed until no more swaps are needed.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Algorithm type</th>
+<th style="text-align:left">Sort Type</th>
+<th style="text-align:left">Best-case perf.</th>
+<th style="text-align:left">Worst-case perf.</th>
+<th style="text-align:left">Average perf.</th>
+<th style="text-align:left">Worst-case space perf.</th>
+<th style="text-align:left">Stable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Sorting Algorithm</td>
+<td style="text-align:left">Comparison Sort</td>
+<td style="text-align:left">O(n)</td>
+<td style="text-align:left">O(nˆ2)</td>
+<td style="text-align:left">O(nˆ2)</td>
+<td style="text-align:left">O(1) aux</td>
+<td style="text-align:left">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Where perf. stands for performance.</p>
+<p>This algorithm is mainly used for academic purposes as its temporal complexity one of the worst of the Comparison Sorting algorithms.
+When considering this algorithm, it is widely suggested to invest in Insertion sort instead which generally produces faster results.</p>
+<p>Additional information on the algorithm:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bubble_sort">Wikipedia Bubble Sort</a></li>
+<li><a href="https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm">Tutorials Point Bubble Sort</a></li>
+<li><a href="http://www.geeksforgeeks.org/bubble-sort/">GeeksforGeeks Bubble Sort</a></li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bubble.js.html">bubble.js</a>, <a href="bubble.js.html#line67">line 67</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="global.html#defaultCompare">defaultCompare</a> for the default comparision function.</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Array</code></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">
+                <p>The array to be sorted.</p>
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fnCompare</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>function</code></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    defaultCompare
+                
+                </td>
+            
+
+            <td class="description last">
+                <p>A compare function.</p>
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>Array</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    <p>A new sorted array.</p>
+</div>
+
+    
+</div>
+
+
+
+<div class="section-examples">
+<h5>Examples</h5>
+
+        <p class="code-caption">Using bubble sort with a custom compare function.</p>
+    
+    <pre class="prettyprint"><code>const { bubble } = require("node-sortable");
+
+const array = [
+       { name: "John", age: 5 },
+       { name: "Cersei", age: 1 },
+       { name: "Ned", age: 4 },
+       { name: "Aria", age: 2 },
+       { name: "Tyrion", age: 8 }
+   ],
+   fnCompare = ( obj1, obj2 ) => {
+       if( obj1.age &lt; obj2.age )
+           return -1;
+       if( obj1.age > obj2.age )
+           return 1;
+       return 0;
+   };
+
+const sorted = bubble( array, fnCompare );
+
+//sorted will equal:
+// [
+//     { name: "Cersei", age: 1 },
+//     { name: "Aria", age: 2 },
+//     { name: "Ned", age: 4 },
+//     { name: "John", age: 5 },
+//     { name: "Tyrion", age: 8 }
+// ]</code></pre>
+
+        <p class="code-caption">Using bubble sort with the default compare function.</p>
+    
+    <pre class="prettyprint"><code>const { bubble } = require("node-sortable");
+
+const array = [ 5, 1, 4, 2, 8 ];
+
+const sorted = bubble( array );
+
+//sorted will equal: [ 1, 2, 4, 5, 8 ]</code></pre>
+
+</div>
+
+</div>
+        
+            
+<div class="section-method">
+
+    
+
+    <h4 class="name" id="defaultCompare"><span class="type-signature"></span>defaultCompare<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Default sort according to string Unicode code points. This is as specified in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Array.prototype.sort</a>.
+This function is the default sorting function as specified in the <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-sortcompare">ECMA script</a>.</p>
+<p>It is provided to all sorting algorithms as a default comparision function which can be overwritten if desired.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="defaultCompare.js.html">defaultCompare.js</a>, <a href="defaultCompare.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The first element to be compared.</p>
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The second element to be compared.</p>
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>Number</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    <p>0 if both elements are the same, -1 if <code>x</code> should have a lower index then <code>y</code> and 1 otherwise.</p>
+</div>
+
+    
+</div>
+
+
+
+</div>
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Nov 29 2017 12:37:39 GMT+0100 (CET) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

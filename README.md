@@ -1,4 +1,4 @@
-#  node-sortable :rocket::smile: 
+#  node-sortable :rocket::smile:
 [![Build Status](https://travis-ci.org/1fabiopereira/node-sortable.svg?branch=master)](https://travis-ci.org/1fabiopereira/node-sortable) [![npm version](https://badge.fury.io/js/node-sortable.svg)](https://badge.fury.io/js/node-sortable) [![Coverage Status](https://coveralls.io/repos/github/1fabiopereira/node-sortable/badge.svg)](https://coveralls.io/github/1fabiopereira/node-sortable)
 
 [![NPM](https://nodei.co/npm/node-sortable.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-sortable/)
@@ -46,7 +46,7 @@ Verify if you have [node](http://nodejs.org/) and [npm](https://www.npmjs.org/) 
 ##### :white_check_mark:  Run:
 
 ```
-npm install node-sortable --save
+npm i node-sortable
 ```
 
 ```

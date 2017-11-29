@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#bubble">bubble</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#defaultCompare">defaultCompare</a></span></li>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>node-sortable :rocket::smile:</h1><p><a href="https://travis-ci.org/1fabiopereira/node-sortable"><img src="https://travis-ci.org/1fabiopereira/node-sortable.svg?branch=master" alt="Build Status"></a> <a href="https://badge.fury.io/js/node-sortable"><img src="https://badge.fury.io/js/node-sortable.svg" alt="npm version"></a> <a href="https://coveralls.io/github/1fabiopereira/node-sortable"><img src="https://coveralls.io/repos/github/1fabiopereira/node-sortable/badge.svg" alt="Coverage Status"></a></p>
+<p><a href="https://nodei.co/npm/node-sortable/"><img src="https://nodei.co/npm/node-sortable.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="NPM"></a>
+<a href="https://nodei.co/npm/node-sortable/"><img src="https://nodei.co/npm-dl/node-sortable.png" alt="NPM"></a></p>
+<h3>:pushpin:  What is that ?</h3><p><strong>node-sortable</strong> is a library that implements various sorting algorithms and displays its performance according to BIG -O notation.</p>
+<h3>:pushpin:  Big-O Complexity Chart</h3><p><img src="https://cdn.rawgit.com/1fabiopereira/node-sortable/master/img/chart.svg"></p>
+<p>In computer science, big O notation is used to classify algorithms by how they respond to changes in input size, such as how the processing time of an algorithm changes as the problem size becomes extremely large.</p>
+<p><a href="https://en.wikipedia.org/wiki/Big_O_notation">See more</a></p>
+<h1>:pushpin:  Roadmap</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">Algorithm</th>
+<th style="text-align:center">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Quick</td>
+<td style="text-align:center">DONE</td>
+</tr>
+<tr>
+<td style="text-align:center">Merge</td>
+<td style="text-align:center">DONE</td>
+</tr>
+<tr>
+<td style="text-align:center">Comb</td>
+<td style="text-align:center">DONE</td>
+</tr>
+<tr>
+<td style="text-align:center">Time</td>
+<td style="text-align:center">TODO</td>
+</tr>
+<tr>
+<td style="text-align:center">Heap</td>
+<td style="text-align:center">DONE</td>
+</tr>
+<tr>
+<td style="text-align:center">Bubble</td>
+<td style="text-align:center">DONE</td>
+</tr>
+<tr>
+<td style="text-align:center">Insertion</td>
+<td style="text-align:center">DONE</td>
+</tr>
+<tr>
+<td style="text-align:center">Selection</td>
+<td style="text-align:center">DONE</td>
+</tr>
+<tr>
+<td style="text-align:center">Tree</td>
+<td style="text-align:center">TODO</td>
+</tr>
+<tr>
+<td style="text-align:center">Shell</td>
+<td style="text-align:center">DONE</td>
+</tr>
+<tr>
+<td style="text-align:center">Bucket</td>
+<td style="text-align:center">DONE</td>
+</tr>
+<tr>
+<td style="text-align:center">Radix</td>
+<td style="text-align:center">DONE</td>
+</tr>
+<tr>
+<td style="text-align:center">Counting</td>
+<td style="text-align:center">TODO</td>
+</tr>
+<tr>
+<td style="text-align:center">Cube</td>
+<td style="text-align:center">TODO</td>
+</tr>
+</tbody>
+</table>
+<h3>:pushpin:  How to install</h3><hr>
+<p>Verify if you have <a href="http://nodejs.org/">node</a> and <a href="https://www.npmjs.org/">npm</a> installed.</p>
+<h5>:white_check_mark:  Run:</h5><pre class="prettyprint source"><code>npm i node-sortable</code></pre><pre class="prettyprint source"><code>const sort = require('node-sortable');</code></pre><hr>
+<h3>:pushpin:  Methods</h3><hr>
+<h5>:white_check_mark: Comb Sort</h5><pre class="prettyprint source"><code>sort.comb(array, sort.DESC)</code></pre><pre class="prettyprint source"><code>sort.comb(array, sort.ASC)</code></pre><pre class="prettyprint source"><code>sort.comb(array, comparisonFunction)</code></pre><h5>:white_check_mark: Quick Sort</h5><pre class="prettyprint source"><code>sort.quick(array, sort.DESC)</code></pre><pre class="prettyprint source"><code>sort.quick(array, sort.ASC)</code></pre><pre class="prettyprint source"><code>sort.quick(array, comparisonFunction)</code></pre><h5>:white_check_mark: Merge Sort</h5><pre class="prettyprint source"><code>sort.merge(array, sort.DESC)</code></pre><pre class="prettyprint source"><code>sort.merge(array, sort.ASC)</code></pre><pre class="prettyprint source"><code>sort.merge(array, comparisonFunction)</code></pre><h5>:white_check_mark: Selection Sort</h5><pre class="prettyprint source"><code>sort.selection(array, sort.DESC)</code></pre><pre class="prettyprint source"><code>sort.selection(array, sort.ASC)</code></pre><pre class="prettyprint source"><code>sort.selection(array, comparisonFunction)</code></pre><h5>:white_check_mark: Bubble Sort</h5><pre class="prettyprint source"><code>sort.bubble(array, sort.DESC)</code></pre><pre class="prettyprint source"><code>sort.bubble(array, sort.ASC)</code></pre><pre class="prettyprint source"><code>sort.bubble(array, comparisonFunction)</code></pre><h5>:white_check_mark: Insertion Sort</h5><pre class="prettyprint source"><code>sort.insertion(array, sort.DESC)</code></pre><pre class="prettyprint source"><code>sort.insertion(array, sort.ASC)</code></pre><pre class="prettyprint source"><code>sort.insertion(array, comparisonFunction)</code></pre><h5>:white_check_mark: Bucket Sort</h5><p>:warning: This implementation only supports integers</p>
+<pre class="prettyprint source"><code>sort.bucket(array, bucketSize, sort.DESC)</code></pre><pre class="prettyprint source"><code>sort.bucket(array, bucketSize, sort.ASC)</code></pre><pre class="prettyprint source"><code>sort.bucket(array, bucketSize, comparisonFunction)</code></pre><h5>:white_check_mark: Shell Sort</h5><p>:warning: This implementation only supports integers</p>
+<pre class="prettyprint source"><code>sort.shell(array, sort.DESC)</code></pre><pre class="prettyprint source"><code>sort.shell(array, sort.ASC)</code></pre><pre class="prettyprint source"><code>sort.shell(array, comparisonFunction)</code></pre><h5>:white_check_mark: Heap Sort</h5><p>:warning: This implementation only supports numbers</p>
+<pre class="prettyprint source"><code>sort.heap(array, sort.DESC)</code></pre><pre class="prettyprint source"><code>sort.heap(array, sort.ASC)</code></pre><p> :pencil2: Example how to use:</p>
+<pre class="prettyprint source lang-javascript"><code>let numbers = [10, 1, 2, 13];
+
+sort.method(numbers, sort.ASC); //[1,2,10,13]
+sort.method(numbers, sort.DESC); //[13,10,2,1]
+
+let letters = [&quot;A&quot;,&quot;Z&quot;,&quot;W&quot;,&quot;M&quot;];
+sort.method(letters, sort.ASC); //[&quot;A&quot;,&quot;M&quot;,&quot;W&quot;,&quot;Z&quot;]
+sort.method(letters, sort.DESC); //[&quot;Z&quot;,&quot;W&quot;,&quot;M&quot;,&quot;A&quot;]</code></pre><p>:pencil2: Example customized comparison function:</p>
+<p>:warning: <strong>Important Note:</strong> Some comparison conditions are the reverse of the natural because this way the algorithm takes best advantage. Before implementing a custom comparison function check the operation of the algorithm. It is very suitable to use drive tests.</p>
+<pre class="prettyprint source lang-javascript"><code>let peoples = [
+  {name: &quot;Alex&quot;, age: 12},
+  {name: &quot;Max&quot;, age: 34},
+  {name: &quot;Mary&quot;, age: 9},
+  {name: &quot;Justin&quot;, age: 53}
+];
+
+const fnASC = (a, b) =>{
+  return a.age > b.age; //inverse of the natural condition
+}
+
+const fnDESC = (a, b) =>{
+  return a.age &lt; b.age; //inverse of the natural condition
+}
+
+sort.bubble(peoples, fnASC); //[{name: &quot;Mary&quot;, age: 9}, {name: &quot;Alex&quot;, age: 12},{name: &quot;Max&quot;, age: 34},{name: &quot;Justin&quot;, age: 53}];
+sort.bubble(peoples, fnDESC); //[{name: &quot;Justin&quot;, age: 53},{name: &quot;Max&quot;, age: 34},{name: &quot;Alex&quot;, age: 12},{name: &quot;Mary&quot;, age: 9}];</code></pre><h5>:white_check_mark: Radix Sort</h5><pre class="prettyprint source"><code>sort.radix(array, significant_digit);</code></pre><p>:pencil2: Radix Example:</p>
+<p>:warning: This implementation only supports integers</p>
+<ul>
+<li><p>Input list:</p>
+<pre class="prettyprint source"><code>let array = [126, 328, 636, 341, 416, 131, 328]</code></pre><pre class="prettyprint source"><code>sort.radix(array, 1);</code></pre><p>Least significant digit output: 341, 131, 126, 636, 416, 328, 328</p>
+<hr>
+<pre class="prettyprint source"><code>sort.radix(array, 2);</code></pre><p>Next high  significant digit output: 416, 126, 328, 328, 131, 636, 341</p>
+<hr>
+<pre class="prettyprint source"><code>sort.radix(array, 3);</code></pre><p>Most significant digit output: 1 26, 131, 328, 328, 341, 416, 636</p>
+<hr>
+</li>
+</ul>
+<h3>:pushpin:  Development</h3><hr>
+<h5>Code style:</h5><p>Follow the <a href="https://github.com/1fabiopereira/node-sortable/blob/master/CODE-STYLE.md">node-sortable style guide</a>.</p>
+<p>Validate the code style with <a href="http://eslint.org/">ESLint</a>:</p>
+<pre class="prettyprint source"><code>npm run eslint</code></pre><h5>Code Docs</h5><p>Generate code docs with <a href="http://usejsdoc.org/">JSDocs</a>:</p>
+<pre class="prettyprint source"><code>npm run jsdocs</code></pre><p>View code docs in docs/index.html</p>
+<h5>Tests</h5><p>Run the unit tests with <a href="https://mochajs.org/">mocha</a>:</p>
+<pre class="prettyprint source"><code>npm run test</code></pre><p>Calculate the coverage with <a href="http://gotwarlost.github.io/istanbul/">Istanbul</a>:</p>
+<pre class="prettyprint source"><code>npm run cover</code></pre><hr>
+<h3>:pushpin: Versioning</h3><p>To keep better organization of releases we follow the <a href="http://semver.org/">Semantic Versioning 2.0.0</a> guidelines.</p>
+<h3>:pushpin: Contributing</h3><p>Find on our <a href="https://github.com/1fabiopereira/node-sortable/issues">issues</a> the next steps of the project ;)
+Want to contribute? <a href="https://github.com/1fabiopereira/node-sortable/blob/master/CONTRIBUTING.md">Follow these recommendations</a>.</p>
+<h3>:pushpin:  License</h3><hr>
+<p>The MIT License (MIT)</p>
+<p>Copyright (c) 2016 Fábio Pereira</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Nov 29 2017 12:37:39 GMT+0100 (CET) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

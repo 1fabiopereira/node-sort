@@ -1,3 +1,13 @@
+/**
+ * Default sort according to string Unicode code points. This is as specified in [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
+ * This function is the default sorting function as specified in the [ECMA script](http://www.ecma-international.org/ecma-262/6.0/#sec-sortcompare).
+ *
+ * It is provided to all sorting algorithms as a default comparision function which can be overwritten if desired.
+ *
+ * @param x The first element to be compared.
+ * @param y The second element to be compared.
+ * @return {Number} 0 if both elements are the same, -1 if `x` should have a lower index then `y` and 1 otherwise.
+ */
 const defaultCompare = ( x, y ) => {
     //INFO: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
     //ECMA specification: http://www.ecma-international.org/ecma-262/6.0/#sec-sortcompare
