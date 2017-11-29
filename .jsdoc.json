@@ -12,12 +12,13 @@
         "plugins/markdown"
     ],
     "templates": {
-        "referenceTitle": "My SDK Name"
+        "referenceTitle": "node-sortable"
     },
     "opts": {
         "destination": "./docs",
         "encoding": "utf8",
         "recurse": true,
-        "template": "./jsdoc-template"
+        "template": "./node_modules/minami",
+        "readme": "./README.md"
     }
 }

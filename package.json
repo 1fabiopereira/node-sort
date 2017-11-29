@@ -11,6 +11,7 @@
     "chai": "^4.1.2",
     "eslint": "^4.11.0",
     "jsdoc": "^3.5.5",
+    "minami": "^1.2.3",
     "mocha": "^4.0.1",
     "nyc": "^11.3.0"
   },
@@ -31,6 +32,7 @@
     "timesort",
     "heapsort",
     "bubblesort",
+    "sinkingsort",
     "insertionsort",
     "selectionsort",
     "treesort",
@@ -50,7 +52,6 @@
   },
   "homepage": "https://github.com/1fabiopereira/node-sortable#readme",
   "dependencies": {
-    "lodash.clonedeep": "^4.5.0",
     "lodash.isfunction": "^3.0.8"
   }
 }
