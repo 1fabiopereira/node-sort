@@ -6,7 +6,7 @@ module.exports = {
     // merge: require("./merge"),
     // radix: require("./radix"),
     // bucket: require("./bucket"),
-    // insertion: require("./insertion"),
+    insertion: require("./insertion"),
     // shell: require("./shell"),
     // heap: require("./heap"),
     // selection: require("./selection")

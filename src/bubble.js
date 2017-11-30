@@ -21,6 +21,11 @@ const defaultCompare = require("./defaultCompare");
  *  - [Tutorials Point Bubble Sort](https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm)
  *  - [GeeksforGeeks Bubble Sort](http://www.geeksforgeeks.org/bubble-sort/)
  *
+ * Variations:
+ * - Odd-even sort and cocktail sort are both parallel versions of this algorithm.
+ * - In some cases, the the algorithm starts from right to left.
+ * This is usual with partially sorted arrays, or arrays with unsorted items added to the end.
+ *
  * @param  {Array}    array                       The array to be sorted.
  * @param  {Function} [fnCompare=defaultCompare]  A compare function.
  * @return {Array}                                A new sorted array.

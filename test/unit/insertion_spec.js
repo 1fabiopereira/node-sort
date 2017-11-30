@@ -1,37 +1,37 @@
 
 const expect = require("chai").expect;
-const { bubble } = require("../../src");
+const { insertion } = require("../../src");
 
-describe("bubble", () => {
+describe("insertion", () => {
 
     it("should throw if fnCompare is not a function", () => {
         const array = [], fnCompare = "NotAFunction";
-        expect( bubble.bind( null, array, fnCompare ) ).to.throw();
+        expect( insertion.bind( null, array, fnCompare ) ).to.throw();
     });
 
     it("should throw if array is not an array", () => {
         const array = "NotAnArray";
-        expect( bubble.bind( undefined, array ) ).to.throw();
+        expect( insertion.bind( undefined, array ) ).to.throw();
     });
 
     it("should return an empty array if the given array is empty", () => {
         const array = [];
         const expected = [];
-        expect( bubble( array ) ).to.eql( expected );
+        expect( insertion( array ) ).to.eql( expected );
     });
 
     it("should order an array of size 1 without fnCompare", () => {
         const array = [ 5 ];
         const expected = [ 5 ];
 
-        expect( bubble( array ) ).to.eql( expected );
+        expect( insertion( array ) ).to.eql( expected );
     });
 
     it("should order array without fnCompare", () => {
         const array = [ 5, 1, 4, 2, 8 ];
         const expected = [ 1, 2, 4, 5, 8 ];
 
-        expect( bubble( array ) ).to.eql( expected );
+        expect( insertion( array ) ).to.eql( expected );
     });
 
     it("should order array in ascending order", () => {
@@ -58,7 +58,7 @@ describe("bubble", () => {
             { name: "Tyrion", age: 8 }
         ];
 
-        expect( bubble( array, fnCompare ) ).to.eql( expected );
+        expect( insertion( array, fnCompare ) ).to.eql( expected );
     });
 
     it("should order array in descending order", () => {
@@ -85,6 +85,6 @@ describe("bubble", () => {
             { name: "Cersei", age: 1 }
         ];
 
-        expect( bubble( array, fnCompare ) ).to.eql( expected );
+        expect( insertion( array, fnCompare ) ).to.eql( expected );
     });
 });

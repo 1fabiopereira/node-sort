@@ -16,6 +16,7 @@
     "nyc": "^11.3.0"
   },
   "scripts": {
+    "mocha": "nyc ./node_modules/mocha/bin/mocha --reporter spec",
     "test": "nyc ./node_modules/mocha/bin/mocha --reporter spec test/unit/*_spec.js",
     "doc": "./node_modules/.bin/jsdoc --configure .jsdoc.json"
   },
