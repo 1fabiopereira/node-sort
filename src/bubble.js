@@ -15,16 +15,19 @@ const defaultCompare = require("./defaultCompare");
  * This algorithm is mainly used for academic purposes as its temporal complexity one of the worst of the Comparison Sorting algorithms.
  * When considering this algorithm, it is widely suggested to invest in Insertion sort instead which generally produces faster results.
  *
+ * However, it is used not as a sorting algorithm but as a detector algorithm.
+ * This happens because it is able to detect if an array is not ordered very rapidly and it can be executed in various sections of the array in parallel.
+ *
+ *
  * Additional information on the algorithm:
  *
- *  - [Wikipedia Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
- *  - [Tutorials Point Bubble Sort](https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm)
- *  - [GeeksforGeeks Bubble Sort](http://www.geeksforgeeks.org/bubble-sort/)
+ *  - • [Wikipedia Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
+ *  - • [Tutorials Point Bubble Sort](https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm)
+ *  - • [GeeksforGeeks Bubble Sort](http://www.geeksforgeeks.org/bubble-sort/)
  *
  * Variations:
- * - Odd-even sort and cocktail sort are both parallel versions of this algorithm.
- * - In some cases, the the algorithm starts from right to left.
- * This is usual with partially sorted arrays, or arrays with unsorted items added to the end.
+ * - • Odd-even sort and cocktail sort are both parallel versions of this algorithm.
+ * - • In some cases, the the algorithm starts from right to left. This is usual with partially sorted arrays, or arrays with unsorted items added to the end.
  *
  * @param  {Array}    array                       The array to be sorted.
  * @param  {Function} [fnCompare=defaultCompare]  A compare function.
