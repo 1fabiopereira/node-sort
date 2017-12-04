@@ -1,99 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Global - Documentation</title>
 
-    <script src="scripts/prettify/prettify.js"></script>
-    <script src="scripts/prettify/lang-css.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      Global - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
 </head>
+
 <body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger" class="navicon-button x">
-  <div class="navicon"></div>
-</label>
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
 
-<label for="nav-trigger" class="overlay"></label>
+  <label for="nav-trigger" class="overlay"></label>
 
-<nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#bubble">bubble</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#defaultCompare">defaultCompare</a></span></li>
-</nav>
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
 
-<div id="main">
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      node-sortable
+    </h3>
+
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#bubble">bubble</a></li><li><a href="global.html#defaultCompare">defaultCompare</a></li><li><a href="global.html#insertion">insertion</a></li></ul>
+  </nav>
+
+  <div id="main">
     
-    <h1 class="page-title">Global</h1>
+      <h1 class="page-title">
+        Global
+      </h1>
     
 
     
-
-
-
 
 <section>
-
-<header>
+  <header>
     
-        <h2>
+      <h2>
         
-        </h2>
         
-    
-</header>
+        
+      </h2>
 
-<article>
+      
+    
+  </header>
+
+  <article>
     <div class="container-overview">
-    
+      
         
 
         
-
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
         
-    
+      
     </div>
 
     
@@ -109,21 +155,30 @@
     
 
     
-        <h3 class="subsection-title">Methods</h3>
+      <h3 class="subsection-title">Methods</h3>
 
+      
         
-            
-<div class="section-method">
-
-    
-
-    <h4 class="name" id="bubble"><span class="type-signature"></span>bubble<span class="signature">(array, fnCompare<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array}</span></h4>
-
-    
 
 
+  
 
-<div class="description">
+  <span class='name-container'>
+    <a class="link-icon" href="#bubble">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="bubble">
+      <span class="type-signature"></span>bubble<span class="signature">(array, fnCompare<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>Bubble sort ( aka sinking sort ) is an algorithm that steps through a list comparing adjacent items and swapping then when necessary.
 This pass through is completed until no more swaps are needed.</p>
 <table>
@@ -153,13 +208,141 @@ This pass through is completed until no more swaps are needed.</p>
 <p>Where perf. stands for performance.</p>
 <p>This algorithm is mainly used for academic purposes as its temporal complexity one of the worst of the Comparison Sorting algorithms.
 When considering this algorithm, it is widely suggested to invest in Insertion sort instead which generally produces faster results.</p>
+<p>However, it is used not as a sorting algorithm but as a detector algorithm.
+This happens because it is able to detect if an array is not ordered very rapidly and it can be executed in various sections of the array in parallel.</p>
 <p>Additional information on the algorithm:</p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Bubble_sort">Wikipedia Bubble Sort</a></li>
-<li><a href="https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm">Tutorials Point Bubble Sort</a></li>
-<li><a href="http://www.geeksforgeeks.org/bubble-sort/">GeeksforGeeks Bubble Sort</a></li>
+<li>• <a href="https://en.wikipedia.org/wiki/Bubble_sort">Wikipedia Bubble Sort</a></li>
+<li>• <a href="https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm">Tutorials Point Bubble Sort</a></li>
+<li>• <a href="http://www.geeksforgeeks.org/bubble-sort/">GeeksforGeeks Bubble Sort</a></li>
 </ul>
-</div>
+<p>Variations:</p>
+<ul>
+<li>• Odd-even sort and cocktail sort are both parallel versions of this algorithm.</li>
+<li>• In some cases, the the algorithm starts from right to left. This is usual with partially sorted arrays, or arrays with unsorted items added to the end.</li>
+</ul>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+        <th>Attributes</th>
+      
+
+      
+        <th>Default</th>
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>array</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+          </td>
+        
+
+        <td class="description last">
+          <p>The array to be sorted.</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>fnCompare</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+              defaultCompare
+            
+          </td>
+        
+
+        <td class="description last">
+          <p>A compare function.</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
 
 
 
@@ -167,49 +350,57 @@ When considering this algorithm, it is widely suggested to invest in Insertion s
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bubble.js.html">bubble.js</a>, <a href="bubble.js.html#line67">line 67</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="bubble.js.html">bubble.js</a>, <a href="bubble.js.html#line75">line 75</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
     <dt class="tag-see">See:</dt>
     <dd class="tag-see">
-        <ul>
-            <li><a href="global.html#defaultCompare">defaultCompare</a> for the default comparision function.</li>
-        </ul>
+      <ul>
+        
+          <li>
+            <a href="global.html#defaultCompare">defaultCompare</a> for the default comparision function.
+          </li>
+        
+      </ul>
     </dd>
-    
+  
 
-    
+  
 </dl>
 
 
@@ -220,161 +411,24 @@ When considering this algorithm, it is widely suggested to invest in Insertion s
 
 
 
-    <h5>Parameters:</h5>
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#bubble-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="bubble-examples">Examples</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>array</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><code>Array</code></span>
+  <p class="code-caption">
+    Using bubble sort with a custom compare function.
+  </p>
 
 
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">
-                <p>The array to be sorted.</p>
-                
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>fnCompare</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><code>function</code></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    defaultCompare
-                
-                </td>
-            
-
-            <td class="description last">
-                <p>A compare function.</p>
-                
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="section-returns">
-<h5>Returns:</h5>
-
-        
-
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type"><code>Array</code></span>
-
-
-    </dd>
-</dl>
-
-
-<div class="param-desc">
-    <p>A new sorted array.</p>
-</div>
-
-    
-</div>
-
-
-
-<div class="section-examples">
-<h5>Examples</h5>
-
-        <p class="code-caption">Using bubble sort with a custom compare function.</p>
-    
-    <pre class="prettyprint"><code>const { bubble } = require("node-sortable");
+  <pre class="prettyprint"><code>const { bubble } = require("node-sortable");
 
 const array = [
        { name: "John", age: 5 },
@@ -402,9 +456,12 @@ const sorted = bubble( array, fnCompare );
 //     { name: "Tyrion", age: 8 }
 // ]</code></pre>
 
-        <p class="code-caption">Using bubble sort with the default compare function.</p>
-    
-    <pre class="prettyprint"><code>const { bubble } = require("node-sortable");
+  <p class="code-caption">
+    Using bubble sort with the default compare function.
+  </p>
+
+
+  <pre class="prettyprint"><code>const { bubble } = require("node-sortable");
 
 const array = [ 5, 1, 4, 2, 8 ];
 
@@ -412,26 +469,107 @@ const sorted = bubble( array );
 
 //sorted will equal: [ 1, 2, 4, 5, 8 ]</code></pre>
 
-</div>
 
-</div>
+  </div>
+
+
+      
         
-            
-<div class="section-method">
-
-    
-
-    <h4 class="name" id="defaultCompare"><span class="type-signature"></span>defaultCompare<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {Number}</span></h4>
-
-    
 
 
+  
 
-<div class="description">
+  <span class='name-container'>
+    <a class="link-icon" href="#defaultCompare">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="defaultCompare">
+      <span class="type-signature"></span>defaultCompare<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {Number}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>Default sort according to string Unicode code points. This is as specified in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Array.prototype.sort</a>.
 This function is the default sorting function as specified in the <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-sortcompare">ECMA script</a>.</p>
 <p>It is provided to all sorting algorithms as a default comparision function which can be overwritten if desired.</p>
-</div>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>x</code></td>
+        
+
+        <td class="type">
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>The first element to be compared.</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>y</code></td>
+        
+
+        <td class="type">
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>The second element to be compared.</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
 
 
 
@@ -439,42 +577,46 @@ This function is the default sorting function as specified in the <a href="http:
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="defaultCompare.js.html">defaultCompare.js</a>, <a href="defaultCompare.js.html#line11">line 11</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="defaultCompare.js.html">defaultCompare.js</a>, <a href="defaultCompare.js.html#line11">line 11</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -485,136 +627,351 @@ This function is the default sorting function as specified in the <a href="http:
 
 
 
-    <h5>Parameters:</h5>
-    
+
+
+
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#insertion">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="insertion">
+      <span class="type-signature"></span>insertion<span class="signature">(array, fnCompare<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Insertion sort is a simple algorithm that builds the final sorted array one item at a time.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Algorithm type</th>
+<th style="text-align:left">Sort Type</th>
+<th style="text-align:left">Best-case perf.</th>
+<th style="text-align:left">Worst-case perf.</th>
+<th style="text-align:left">Average perf.</th>
+<th style="text-align:left">Worst-case space perf.</th>
+<th style="text-align:left">Stable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Sorting Algorithm</td>
+<td style="text-align:left">Comparison Sort</td>
+<td style="text-align:left">O(n)</td>
+<td style="text-align:left">O(nˆ2)</td>
+<td style="text-align:left">O(nˆ2)</td>
+<td style="text-align:left">О(n) total, O(1) aux</td>
+<td style="text-align:left">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Where perf. stands for performance.</p>
+<p>Although less efficient than quicksort, heapsort or merge sort for large data sets, it usually outperforms them for small data sets.
+It also more effcient than other simple quadradic algorithms such as bubble sort and selection sort.</p>
+<p>Additional information on the algorithm:</p>
+<ul>
+<li>• <a href="https://en.wikipedia.org/wiki/Insertion_sort">Wikipedia Insertion Sort</a></li>
+<li>• <a href="https://www.tutorialspoint.com/data_structures_algorithms/insertion_sort_algorithm.htm">Tutorials Point Insertion Sort</a></li>
+<li>• <a href="http://www.geeksforgeeks.org/insertion-sort/">GeeksforGeeks Insertion Sort</a></li>
+</ul>
+<p>Variations:</p>
+<ul>
+<li>• Shell sort, as created by D.L. Shell has better perf. complexity on both its variants.</li>
+<li>• Binary insertion sort, is a simillar algorithm used when the cost of writting data is expensive VS the cost of read it ( using SSD for example ).</li>
+<li>• Binary merge sort, is a composition of both insertion sort ( for small array ) and merge sort ( for the final, bigger array ).</li>
+<li>• Both heap sort and Binary tree sort are adaptations of this algorithm for heaps and binary trees.</li>
+<li>• Library sort, aka gapped insertion is a modification of this algorithm that runs with high probability in O(n log n) time.</li>
+</ul>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
+        <th>Attributes</th>
+      
 
-        
+      
+        <th>Default</th>
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>array</code></td>
+        
 
-        <tr>
+        <td class="type">
+          
             
-                <td class="name"><code>x</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <p>The first element to be compared.</p>
-                
-            </td>
-        </tr>
+    <span class="param-type">
+      Array
+    </span>
 
     
 
-        <tr>
-            
-                <td class="name"><code>y</code></td>
-            
 
-            <td class="type">
-            
-            </td>
+          
+        </td>
 
+        
+          <td class="attributes">
             
 
             
 
-            <td class="description last">
-                <p>The second element to be compared.</p>
-                
-            </td>
-        </tr>
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+          </td>
+        
+
+        <td class="description last">
+          <p>The array to be sorted.</p>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+      <tr>
+        
+          <td class="name"><code>fnCompare</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+              defaultCompare
+            
+          </td>
+        
+
+        <td class="description last">
+          <p>A compare function.</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
 </table>
 
 
 
 
 
+<dl class="details">
 
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-<div class="section-returns">
-<h5>Returns:</h5>
+  
 
-        
+  
 
-<dl class="param-type">
-    <dt>
-        Type:
-    </dt>
-    <dd>
-        
-<span class="param-type"><code>Number</code></span>
+  
 
+  
 
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="insertion.js.html">insertion.js</a>, <a href="insertion.js.html#line74">line 74</a>
+        </li>
+      </ul>
     </dd>
+  
+
+  
+
+  
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+      <ul>
+        
+          <li>
+            <a href="global.html#defaultCompare">defaultCompare</a> for the default comparision function.
+          </li>
+        
+      </ul>
+    </dd>
+  
+
+  
 </dl>
 
 
-<div class="param-desc">
-    <p>0 if both elements are the same, -1 if <code>x</code> should have a lower index then <code>y</code> and 1 otherwise.</p>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#insertion-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="insertion-examples">Examples</h5>
+    
+  <p class="code-caption">
+    Using insertion sort with a custom compare function.
+  </p>
+
+
+  <pre class="prettyprint"><code>const { insertion } = require("node-sortable");
+
+const array = [
+       { name: "John", age: 5 },
+       { name: "Cersei", age: 1 },
+       { name: "Ned", age: 4 },
+       { name: "Aria", age: 2 },
+       { name: "Tyrion", age: 8 }
+   ],
+   fnCompare = ( obj1, obj2 ) => {
+       if( obj1.age &lt; obj2.age )
+           return -1;
+       if( obj1.age > obj2.age )
+           return 1;
+       return 0;
+   };
+
+const sorted = insertion( array, fnCompare );
+
+//sorted will equal:
+// [
+//     { name: "Cersei", age: 1 },
+//     { name: "Aria", age: 2 },
+//     { name: "Ned", age: 4 },
+//     { name: "John", age: 5 },
+//     { name: "Tyrion", age: 8 }
+// ]</code></pre>
+
+  <p class="code-caption">
+    Using insertion sort with the default compare function.
+  </p>
+
+
+  <pre class="prettyprint"><code>const { insertion } = require("node-sortable");
+
+const array = [ 5, 1, 4, 2, 8 ];
+
+const sorted = insertion( array );
+
+//sorted will equal: [ 1, 2, 4, 5, 8 ]</code></pre>
+
+
+  </div>
+
+
+      
+    
 
     
-</div>
-
-
-
-</div>
-        
-    
 
     
-
-    
-</article>
-
+  </article>
 </section>
 
 
 
 
-</div>
+  </div>
 
-<br class="clear">
+  <br class="clear">
 
-<footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Nov 29 2017 12:37:39 GMT+0100 (CET) using the Minami theme.
-</footer>
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+  </footer>
 
-<script>prettyPrint();</script>
-<script src="scripts/linenumber.js"></script>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
+
+  
+  
 </body>
 </html>
