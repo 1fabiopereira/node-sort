@@ -7,7 +7,7 @@ module.exports = {
     // radix: require("./radix"),
     // bucket: require("./bucket"),
     insertion: require("./insertion"),
-    // shell: require("./shell"),
+    shell: require("./shell"),
     // heap: require("./heap"),
     // selection: require("./selection")
 };
