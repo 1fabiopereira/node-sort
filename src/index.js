@@ -9,5 +9,5 @@ module.exports = {
     insertion: require("./insertion"),
     // shell: require("./shell"),
     // heap: require("./heap"),
-    // selection: require("./selection")
+    selection: require("./selection")
 };

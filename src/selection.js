@@ -12,10 +12,10 @@ const defaultCompare = require("./defaultCompare");
  *
  * Where:
  *
- *  - perf.: performance.
- *  - comp.: comparisions
- *  - sw.: swaps
- *  - aux.: auxiliary
+ *  - • perf.: performance.
+ *  - • comp.: comparisions
+ *  - • sw.: swaps
+ *  - • aux.: auxiliary
  *
  *
  * Amongst the simple quadradic algorithms, selections sort outperforms bubble sort and gnome sort most of the time.
@@ -35,13 +35,15 @@ const defaultCompare = require("./defaultCompare");
  *  - • [GeeksforGeeks Selection Sort](http://www.geeksforgeeks.org/selection-sort/)
  *
  * Variations:
- * - • Odd-even sort and cocktail sort are both parallel versions of this algorithm.
- * - • In some cases, the the algorithm starts from right to left. This is usual with partially sorted arrays, or arrays with unsorted items added to the end.
+ * - • Heap sort is a modification of this algorithm that uses a heap data structure to find the lowest element. Given an N big enough, heap sort will be more efficient performance wise.
+ * - • Cocktail sort is a bi-directional version of this algorithm which finds both the minimum and maximum values of the list in each pass.
+ * - • Bing sort is a variant where the greatest value is found and moving all items with that value to the end of the new list.
  *
  * @param  {Array}    array                       The array to be sorted.
  * @param  {Function} [fnCompare=defaultCompare]  A compare function.
  * @return {Array}                                A new sorted array.
  * @see    {@link defaultCompare} for the default comparision function.
+ * @see    {@link insertion} to check the insertion sort algorithm specs.
  *
  * @example <caption>Using selection sort with a custom compare function.</caption>
  * const { selection } = require("node-sortable");
@@ -95,10 +97,28 @@ const selection = ( array, fnCompare = defaultCompare ) => {
     //shallow copy
     const clonedArray = array.slice();
 
+    //default non stable implementation: https://en.wikipedia.org/wiki/Selection_sort
+    for( let j = 0; j < clonedArray.length - 1; j++ ){
+
+        let iMin = j;
+        for( let i = j + 1; i < clonedArray.length; i++ ){
+            if( fnCompare( clonedArray[i], clonedArray[iMin] ) < 0 ){
+                iMin = i;
+            }
+        }
+
+        if( iMin !== j ){
+            swap(clonedArray, j, iMin );
+        }
+    }
 
     return clonedArray;
 };
 
-
+const swap = (array, index1, index2) => {
+    const temp = array[index1];
+    array[index1] = array[index2];
+    array[index2] = temp;
+};
 
 module.exports = selection;

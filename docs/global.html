@@ -70,7 +70,7 @@
       node-sortable
     </h3>
 
-    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#bubble">bubble</a></li><li><a href="global.html#defaultCompare">defaultCompare</a></li><li><a href="global.html#insertion">insertion</a></li></ul>
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#bubble">bubble</a></li><li><a href="global.html#defaultCompare">defaultCompare</a></li><li><a href="global.html#insertion">insertion</a></li><li><a href="global.html#selection">selection</a></li></ul>
   </nav>
 
   <div id="main">
@@ -941,6 +941,336 @@ const sorted = insertion( array, fnCompare );
 const array = [ 5, 1, 4, 2, 8 ];
 
 const sorted = insertion( array );
+
+//sorted will equal: [ 1, 2, 4, 5, 8 ]</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#selection">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="selection">
+      <span class="type-signature"></span>selection<span class="signature">(array, fnCompare<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Selection sort divides the input list insto two lists: one with the ordered elements and one with the unordered elements.
+ It then switches elements between the two lists until the unordered list is empty.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Algorithm type</th>
+<th style="text-align:left">Sort Type</th>
+<th style="text-align:left">Best-case perf.</th>
+<th style="text-align:left">Worst-case perf.</th>
+<th style="text-align:left">Average perf.</th>
+<th style="text-align:left">Worst-case space perf.</th>
+<th style="text-align:left">Stable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Sorting Algorithm</td>
+<td style="text-align:left">Comparison Sort</td>
+<td style="text-align:left">O(nˆ2) comp., O(n) sw.</td>
+<td style="text-align:left">O(nˆ2) comp., O(n) sw.</td>
+<td style="text-align:left">O(nˆ2) comp., O(n) sw.</td>
+<td style="text-align:left">О(n) total, O(1) aux.</td>
+<td style="text-align:left">No</td>
+</tr>
+</tbody>
+</table>
+<p>Where:</p>
+<ul>
+<li>• perf.: performance.</li>
+<li>• comp.: comparisions</li>
+<li>• sw.: swaps</li>
+<li>• aux.: auxiliary</li>
+</ul>
+<p>Amongst the simple quadradic algorithms, selections sort outperforms bubble sort and gnome sort most of the time.</p>
+<p>However, it suffers in comparision with insertion sort, which has better performance complexity.
+Still, in situations where auxiliary memory is limited this algorithm is preferred.
+Another important consideration when comparing with insertion sort is consistency. Because this algorithm always scans the entirity of the array,
+it's performance is always the same, whereas with insertion sort, it widely depends on whether the input array is almost sorted or not.</p>
+<p>Still, even though selection sort is better than insertion sort when comparing the number of writes, it never outperforms cycle sort, which is optimized in order to minimize this factor.
+This is usually important when the cost of writes is important, like when writing to Flash memory.</p>
+<p>Additional information on the algorithm:</p>
+<ul>
+<li>• <a href="https://en.wikipedia.org/wiki/Selection_sort">Wikipedia Selection Sort</a></li>
+<li>• <a href="https://www.tutorialspoint.com/data_structures_algorithms/selection_sort_algorithm.htm">Tutorials Point Selection Sort</a></li>
+<li>• <a href="http://www.geeksforgeeks.org/selection-sort/">GeeksforGeeks Selection Sort</a></li>
+</ul>
+<p>Variations:</p>
+<ul>
+<li>• Heap sort is a modification of this algorithm that uses a heap data structure to find the lowest element. Given an N big enough, heap sort will be more efficient performance wise.</li>
+<li>• Cocktail sort is a bi-directional version of this algorithm which finds both the minimum and maximum values of the list in each pass.</li>
+<li>• Bing sort is a variant where the greatest value is found and moving all items with that value to the end of the new list.</li>
+</ul>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+        <th>Attributes</th>
+      
+
+      
+        <th>Default</th>
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>array</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+          </td>
+        
+
+        <td class="description last">
+          <p>The array to be sorted.</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>fnCompare</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+              defaultCompare
+            
+          </td>
+        
+
+        <td class="description last">
+          <p>A compare function.</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="selection.js.html">selection.js</a>, <a href="selection.js.html#line86">line 86</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+      <ul>
+        
+          <li>
+            <a href="global.html#defaultCompare">defaultCompare</a> for the default comparision function.
+          </li>
+        
+          <li>
+            <a href="global.html#insertion">insertion</a> to check the insertion sort algorithm specs.
+          </li>
+        
+      </ul>
+    </dd>
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#selection-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="selection-examples">Examples</h5>
+    
+  <p class="code-caption">
+    Using selection sort with a custom compare function.
+  </p>
+
+
+  <pre class="prettyprint"><code>const { selection } = require("node-sortable");
+
+const array = [
+       { name: "John", age: 5 },
+       { name: "Cersei", age: 1 },
+       { name: "Ned", age: 4 },
+       { name: "Aria", age: 2 },
+       { name: "Tyrion", age: 8 }
+   ],
+   fnCompare = ( obj1, obj2 ) => {
+       if( obj1.age &lt; obj2.age )
+           return -1;
+       if( obj1.age > obj2.age )
+           return 1;
+       return 0;
+   };
+
+const sorted = selection( array, fnCompare );
+
+//sorted will equal:
+// [
+//     { name: "Cersei", age: 1 },
+//     { name: "Aria", age: 2 },
+//     { name: "Ned", age: 4 },
+//     { name: "John", age: 5 },
+//     { name: "Tyrion", age: 8 }
+// ]</code></pre>
+
+  <p class="code-caption">
+    Using selection sort with the default compare function.
+  </p>
+
+
+  <pre class="prettyprint"><code>const { selection } = require("node-sortable");
+
+const array = [ 5, 1, 4, 2, 8 ];
+
+const sorted = selection( array );
 
 //sorted will equal: [ 1, 2, 4, 5, 8 ]</code></pre>
 

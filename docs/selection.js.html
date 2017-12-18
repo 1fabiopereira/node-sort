@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      bubble.js - Documentation
+      selection.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        bubble.js
+        selection.js
       </h1>
     
 
@@ -92,39 +92,50 @@ const defaultCompare = require("./defaultCompare");
 
 /**
  * @desc
- * Bubble sort ( aka sinking sort ) is an algorithm that steps through a list comparing adjacent items and swapping then when necessary.
- * This pass through is completed until no more swaps are needed.
+ *  Selection sort divides the input list insto two lists: one with the ordered elements and one with the unordered elements.
+ *  It then switches elements between the two lists until the unordered list is empty.
  *
- * |  Algorithm type    | Sort Type       | Best-case perf. | Worst-case perf.  | Average perf. | Worst-case space perf.  | Stable  |
- * |  :---------------- | :-------------- | :-------------- | :---------------  | :------------ | :---------------------  | :-----  |
- * |  Sorting Algorithm | Comparison Sort | O(n)            | O(nˆ2)            | O(nˆ2)        | O(1) aux                | Yes     |
+ * |  Algorithm type    | Sort Type       | Best-case perf.         | Worst-case perf.        | Average perf.           | Worst-case space perf.  | Stable  |
+ * |  :---------------- | :-------------- | :---------------------- | :---------------------- | :---------------------  | :---------------------  | :-----  |
+ * |  Sorting Algorithm | Comparison Sort |  O(nˆ2) comp., O(n) sw. | O(nˆ2) comp., O(n) sw.  | O(nˆ2) comp., O(n) sw.  | О(n) total, O(1) aux.   | No      |
  *
- * Where perf. stands for performance.
+ * Where:
  *
- * This algorithm is mainly used for academic purposes as its temporal complexity one of the worst of the Comparison Sorting algorithms.
- * When considering this algorithm, it is widely suggested to invest in Insertion sort instead which generally produces faster results.
+ *  - • perf.: performance.
+ *  - • comp.: comparisions
+ *  - • sw.: swaps
+ *  - • aux.: auxiliary
  *
- * However, it is used not as a sorting algorithm but as a detector algorithm.
- * This happens because it is able to detect if an array is not ordered very rapidly and it can be executed in various sections of the array in parallel.
  *
+ * Amongst the simple quadradic algorithms, selections sort outperforms bubble sort and gnome sort most of the time.
+ *
+ * However, it suffers in comparision with insertion sort, which has better performance complexity.
+ * Still, in situations where auxiliary memory is limited this algorithm is preferred.
+ * Another important consideration when comparing with insertion sort is consistency. Because this algorithm always scans the entirity of the array,
+ * it's performance is always the same, whereas with insertion sort, it widely depends on whether the input array is almost sorted or not.
+ *
+ * Still, even though selection sort is better than insertion sort when comparing the number of writes, it never outperforms cycle sort, which is optimized in order to minimize this factor.
+ * This is usually important when the cost of writes is important, like when writing to Flash memory.
  *
  * Additional information on the algorithm:
  *
- *  - • [Wikipedia Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
- *  - • [Tutorials Point Bubble Sort](https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm)
- *  - • [GeeksforGeeks Bubble Sort](http://www.geeksforgeeks.org/bubble-sort/)
+ *  - • [Wikipedia Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
+ *  - • [Tutorials Point Selection Sort](https://www.tutorialspoint.com/data_structures_algorithms/selection_sort_algorithm.htm)
+ *  - • [GeeksforGeeks Selection Sort](http://www.geeksforgeeks.org/selection-sort/)
  *
  * Variations:
- * - • Odd-even sort and cocktail sort are both parallel versions of this algorithm.
- * - • In some cases, the the algorithm starts from right to left. This is usual with partially sorted arrays, or arrays with unsorted items added to the end.
+ * - • Heap sort is a modification of this algorithm that uses a heap data structure to find the lowest element. Given an N big enough, heap sort will be more efficient performance wise.
+ * - • Cocktail sort is a bi-directional version of this algorithm which finds both the minimum and maximum values of the list in each pass.
+ * - • Bing sort is a variant where the greatest value is found and moving all items with that value to the end of the new list.
  *
  * @param  {Array}    array                       The array to be sorted.
  * @param  {Function} [fnCompare=defaultCompare]  A compare function.
  * @return {Array}                                A new sorted array.
  * @see    {@link defaultCompare} for the default comparision function.
+ * @see    {@link insertion} to check the insertion sort algorithm specs.
  *
- * @example &lt;caption>Using bubble sort with a custom compare function.&lt;/caption>
- * const { bubble } = require("node-sortable");
+ * @example &lt;caption>Using selection sort with a custom compare function.&lt;/caption>
+ * const { selection } = require("node-sortable");
  *
  * const array = [
  *        { name: "John", age: 5 },
@@ -141,7 +152,7 @@ const defaultCompare = require("./defaultCompare");
  *        return 0;
  *    };
  *
- * const sorted = bubble( array, fnCompare );
+ * const sorted = selection( array, fnCompare );
  *
  * //sorted will equal:
  * // [
@@ -152,16 +163,16 @@ const defaultCompare = require("./defaultCompare");
  * //     { name: "Tyrion", age: 8 }
  * // ]
  *
- * @example &lt;caption>Using bubble sort with the default compare function.&lt;/caption>
- * const { bubble } = require("node-sortable");
+ * @example &lt;caption>Using selection sort with the default compare function.&lt;/caption>
+ * const { selection } = require("node-sortable");
  *
  * const array = [ 5, 1, 4, 2, 8 ];
  *
- * const sorted = bubble( array );
+ * const sorted = selection( array );
  *
  * //sorted will equal: [ 1, 2, 4, 5, 8 ]
  */
-const bubble = ( array, fnCompare = defaultCompare ) => {
+const selection = ( array, fnCompare = defaultCompare ) => {
 
     if( !isFunction(fnCompare) )
         throw new Error("fnCompare must be a function");
@@ -175,18 +186,20 @@ const bubble = ( array, fnCompare = defaultCompare ) => {
     //shallow copy
     const clonedArray = array.slice();
 
-    //Optimized bubble sort: https://en.wikipedia.org/wiki/Bubble_sort
-    let size = clonedArray.length;
-    do{
-        let newSize = 0;
-        for( let i = 1; i &lt; size; i++){
-            if( fnCompare( clonedArray[i - 1], clonedArray[i] ) > 0 ){
-                swap( clonedArray, i - 1, i );
-                newSize = i;
+    //default non stable implementation: https://en.wikipedia.org/wiki/Selection_sort
+    for( let j = 0; j &lt; clonedArray.length - 1; j++ ){
+
+        let iMin = j;
+        for( let i = j + 1; i &lt; clonedArray.length; i++ ){
+            if( fnCompare( clonedArray[i], clonedArray[iMin] ) &lt; 0 ){
+                iMin = i;
             }
         }
-        size = newSize;
-    }while( size !== 0);
+
+        if( iMin !== j ){
+            swap(clonedArray, j, iMin );
+        }
+    }
 
     return clonedArray;
 };
@@ -197,7 +210,7 @@ const swap = (array, index1, index2) => {
     array[index2] = temp;
 };
 
-module.exports = bubble;
+module.exports = selection;
 </code></pre>
   </article>
 </section>
